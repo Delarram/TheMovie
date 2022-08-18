@@ -11,7 +11,7 @@ class BannerView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       child: Stack(
-        children: [
+        children: const [
           Positioned.fill(
             child: BannerImageView(),
           ),

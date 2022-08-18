@@ -22,7 +22,7 @@ class HomePage extends StatelessWidget {
           ),
         ],
       ),
-      body: Container(
+      body: SizedBox(
         height: MediaQuery.of(context).size.height / 3,
         child: PageView(
           children: const [
