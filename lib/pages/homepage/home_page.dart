@@ -29,7 +29,7 @@ class HomePage extends StatelessWidget {
           color: primaryColor,
           child: Column(
             children: [
-              BannerSectionView(),
+             const BannerSectionView(),
               Container(
                 height:movieListHeight,
                 child: ListView.separated(
@@ -38,7 +38,7 @@ class HomePage extends StatelessWidget {
                   ),
                   itemCount: 10,
                   itemBuilder: (BuildContext context, int index) {
-                    return MovieView();
+                    return const MovieView();
                   },
                 ),
               ),
