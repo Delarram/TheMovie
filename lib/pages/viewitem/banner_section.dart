@@ -15,17 +15,14 @@ class BannerView extends StatelessWidget {
           Positioned.fill(
             child: BannerImageView(),
           ),
-          Positioned.fill(
-              child: BannerGradientView()
-          ),
+          Positioned.fill(child: BannerGradientView()),
           Align(
             alignment: Alignment.bottomLeft,
             child: BannerTextView(),
           ),
           Align(
             alignment: Alignment.center,
-            child:
-            BannerIconView(),
+            child: BannerIconView(),
           ),
         ],
       ),
@@ -34,20 +31,16 @@ class BannerView extends StatelessWidget {
 }
 
 class BannerIconView extends StatelessWidget {
-  const BannerIconView({
-    Key? key,
-  }) : super(key: key);
+  const BannerIconView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Icon(Icons.play_circle);
+    return const Icon(Icons.play_circle);
   }
 }
 
 class BannerTextView extends StatelessWidget {
-  const BannerTextView({
-    Key? key,
-  }) : super(key: key);
+  const BannerTextView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -55,13 +48,13 @@ class BannerTextView extends StatelessWidget {
       children: const [
         CustomText(
           text: "The XMan 2013",
-          fontSize: textHeadingOne,
+          fontSize: textHeading1X,
           fontWeight: FontWeight.w500,
           color: Color(0xffFFFFFF),
         ),
         CustomText(
           text: "Offical Trailer",
-          fontSize: textHeadingOne,
+          fontSize: textHeading1X,
           fontWeight: FontWeight.w500,
           color: Color(0xffFFFFFF),
         ),
@@ -71,26 +64,22 @@ class BannerTextView extends StatelessWidget {
 }
 
 class BannerGradientView extends StatelessWidget {
-  const BannerGradientView({
-    Key? key,
-  }) : super(key: key);
+  const BannerGradientView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
-            decoration: const BoxDecoration(
-      gradient: LinearGradient(
-          begin: Alignment.topCenter,
-          end: Alignment.bottomCenter,
-          colors: [Colors.transparent, primaryColor])),
-          );
+      decoration: const BoxDecoration(
+          gradient: LinearGradient(
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+              colors: [Colors.transparent, primaryColor])),
+    );
   }
 }
 
 class BannerImageView extends StatelessWidget {
-  const BannerImageView({
-    Key? key,
-  }) : super(key: key);
+  const BannerImageView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
