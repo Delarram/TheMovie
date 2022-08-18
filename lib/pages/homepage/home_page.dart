@@ -23,7 +23,7 @@ class HomePage extends StatelessWidget {
         ],
       ),
       body: Container(
-        height: bannerContainerHeight,
+        height: MediaQuery.of(context).size.height / 3,
         child: PageView(
           children: const [
               BannerView(),
