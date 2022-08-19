@@ -1,9 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:moviedp/pages/homepage/homewidgets/movie_list_title.dart';
 import 'package:moviedp/pages/viewitem/banner_section.dart';
 import 'package:moviedp/pages/viewitem/movie_view.dart';
 import 'package:moviedp/resource/colors.dart';
 import 'package:moviedp/resource/dimens.dart';
+import 'package:moviedp/resource/string.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -28,26 +30,20 @@ class HomePage extends StatelessWidget {
       ),
       body: Container(
           color: primaryColor,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const BannerSectionView(),
-              SizedBox(height: marginLarge),
-              Padding(
-                padding: const EdgeInsets.only(left: mediumMargin2X),
-                child: Text(
-                  "BEST POPULAR MOVIES AND SERIES",
-                  style: TextStyle(
-                      fontWeight: FontWeight.w500,
-                      fontSize: textRegular2X,
-                      color: Colors.grey[400]),
-                ),
+          child: Padding(
+            padding: const EdgeInsets.only(bottom: 15),
+            child: SingleChildScrollView(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                   BannerSectionView(),
+                  SizedBox(height: marginLarge),
+                  HorizontalMovieListView(),
+                  HorizontalMovieListView(),
+
+                ],
               ),
-              SizedBox(
-                height: mediumMargin,
-              ),
-              HorizontalMovieListView(),
-            ],
+            ),
           )),
     );
   }
@@ -58,7 +54,16 @@ class HorizontalMovieListView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
+        Padding(
+            padding: const EdgeInsets.only(left: mediumMargin2X),
+            child: MovieListTitle(
+              text: mainScreenBestPopularAndSeries,
+            )),
+       const  SizedBox(
+          height: mediumMargin,
+        ),
         SizedBox(
           height: movieListHeight,
           child: ListView.separated(
