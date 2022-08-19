@@ -17,7 +17,7 @@ class MovieView extends StatelessWidget {
           ClipRRect(
               borderRadius: BorderRadius.circular(80),
               child: CachedNetworkImage(
-                height: 200,
+                height: movieListItemWidth,
                 fit: BoxFit.cover,
                 imageUrl:
                     'https://m.media-amazon.com/images/I/51SDrub-uRL._AC_SY1000_.jpg',

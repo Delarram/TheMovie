@@ -53,7 +53,7 @@ class BannerTextView extends StatelessWidget {
           color: Color(0xffFFFFFF),
         ),
         CustomText(
-          text: "Offical Trailer",
+          text: "Official Trailer",
           fontSize: textHeading1X,
           fontWeight: FontWeight.w500,
           color: Color(0xffFFFFFF),
@@ -73,7 +73,10 @@ class BannerGradientView extends StatelessWidget {
           gradient: LinearGradient(
               begin: Alignment.topCenter,
               end: Alignment.bottomCenter,
-              colors: [Colors.transparent, primaryColor])),
+              colors: [
+            Colors.transparent,
+            primaryColor,
+          ])),
     );
   }
 }
