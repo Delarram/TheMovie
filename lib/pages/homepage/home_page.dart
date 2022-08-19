@@ -1,8 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:moviedp/pages/homepage/homewidgets/movie_list_title.dart';
+import 'package:moviedp/pages/homepage/homewidgets/title_text_with_see_more_view.dart';
 import 'package:moviedp/pages/viewitem/banner_section.dart';
 import 'package:moviedp/pages/viewitem/movie_view.dart';
+import 'package:moviedp/pages/viewitem/showcase_view.dart';
 import 'package:moviedp/resource/colors.dart';
 import 'package:moviedp/resource/dimens.dart';
 import 'package:moviedp/resource/string.dart';
@@ -15,6 +17,7 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Color(0xff161A20),
       appBar: AppBar(
+        centerTitle: true,
         backgroundColor: pColor,
         title: const Text(
           "Discover",
@@ -35,12 +38,30 @@ class HomePage extends StatelessWidget {
             child: SingleChildScrollView(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                   BannerSectionView(),
+                children:  [
+                  BannerSectionView(),
                   SizedBox(height: marginLarge),
                   HorizontalMovieListView(),
                   HorizontalMovieListView(),
-
+                  Padding(
+                    padding: EdgeInsets.symmetric(
+                        horizontal: mediumMargin2X, vertical: mediumMargin),
+                    child: TitleTextWithSeeMoreView(
+                        titleText: showCaseTitle, seeMoreText: showCaseSeeMore),
+                  ),
+                  Container(
+                    padding: EdgeInsets.only(right:mediumMargin),
+                    height: 300,
+                    child: ListView(
+                      shrinkWrap: true,
+                      scrollDirection: Axis.horizontal,
+                      children: [
+                        ShowCaseView(),
+                        ShowCaseView(),
+                        ShowCaseView(),
+                      ],
+                    ),
+                  )
                 ],
               ),
             ),
@@ -61,7 +82,7 @@ class HorizontalMovieListView extends StatelessWidget {
             child: MovieListTitle(
               text: mainScreenBestPopularAndSeries,
             )),
-       const  SizedBox(
+        const SizedBox(
           height: mediumMargin,
         ),
         SizedBox(

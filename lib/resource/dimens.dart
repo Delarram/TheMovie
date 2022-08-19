@@ -11,5 +11,5 @@ const textHeading1X = 24.0;
 
 ///specific
 const bannerContainerHeight = 200.0;
-const movieListHeight = 200.0;
+const movieListHeight = 210.0;
 const movieListItemWidth = 200.0;

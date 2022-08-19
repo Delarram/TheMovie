@@ -16,7 +16,7 @@ class MovieView extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           ClipRRect(
-              borderRadius: BorderRadius.circular(10),
+              borderRadius: BorderRadius.circular(5),
               child: CachedNetworkImage(
                 height: 160,
                 fit: BoxFit.cover,
@@ -33,17 +33,19 @@ class MovieView extends StatelessWidget {
               )),
           const CustomText(
             text: "World Dragon III",
+            color: Colors.white,
             fontSize: textRegular,
             fontWeight: FontWeight.w600,
           ),
           const SizedBox(
-            height: mediumMargin,
+            height: smallMargin,
           ),
           Row(
             children: [
               const CustomText(
-                text: "9.9",
-                fontSize: mediumMargin,
+                text: "4.9",
+                color: Colors.white,
+                fontSize: 10,
                 fontWeight: FontWeight.w600,
               ),
               const SizedBox(
