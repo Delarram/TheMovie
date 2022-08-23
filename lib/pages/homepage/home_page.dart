@@ -38,7 +38,7 @@ class HomePage extends StatelessWidget {
             child: SingleChildScrollView(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children:  [
+                children: [
                   BannerSectionView(),
                   SizedBox(height: marginLarge),
                   HorizontalMovieListView(),
@@ -50,8 +50,11 @@ class HomePage extends StatelessWidget {
                         titleText: showCaseTitle, seeMoreText: showCaseSeeMore),
                   ),
                   Container(
-                    padding: EdgeInsets.only(right:mediumMargin),
-                    height: 300,
+                    padding: EdgeInsets.only(left: mediumMargin2X),
+                    height: 270,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(30)
+                    ),
                     child: ListView(
                       shrinkWrap: true,
                       scrollDirection: Axis.horizontal,
