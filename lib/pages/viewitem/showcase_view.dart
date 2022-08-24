@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:moviedp/resource/dimens.dart';
 import 'package:moviedp/widgets/custom_text.dart';
@@ -29,7 +28,7 @@ class ShowCaseView extends StatelessWidget {
               alignment: Alignment.bottomLeft,
               child: CustomText(
                 text: "URI",
-                fontSize: textHeading1X,
+                fontSize: textRegular2X,
                 fontWeight: FontWeight.w500,
                 color: Color(0xffFFFFFF),
               ),
