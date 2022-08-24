@@ -30,23 +30,28 @@ class ShowCaseView extends StatelessWidget {
                 child: Padding(
                   padding: EdgeInsets.symmetric(
                       horizontal: mediumMargin, vertical: mediumMargin),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      CustomText(
-                        text: "URI",
-                        fontSize: textRegular2X,
-                        fontWeight: FontWeight.w500,
-                        color: Color(0xffFFFFFF),
-                      ),
-                      CustomText(
-                        text: "15 December 2016",
-                        fontSize: textRegular,
-                        fontWeight: FontWeight.w500,
-                        color: Colors.grey[400],
-                      ),
-                    ],
+                  child: Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10)
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        CustomText(
+                          text: "URI",
+                          fontSize: textRegular2X,
+                          fontWeight: FontWeight.w500,
+                          color: Color(0xffFFFFFF),
+                        ),
+                        CustomText(
+                          text: "15 December 2016",
+                          fontSize: 12,
+                          fontWeight: FontWeight.w500,
+                          color: Colors.grey[400],
+                        ),
+                      ],
+                    ),
                   ),
                 )),
           ],
