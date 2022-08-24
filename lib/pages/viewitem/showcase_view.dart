@@ -28,7 +28,7 @@ class ShowCaseView extends StatelessWidget {
             Align(
                 alignment: Alignment.bottomLeft,
                 child: Padding(
-                  padding: EdgeInsets.symmetric(
+                  padding: const EdgeInsets.symmetric(
                       horizontal: mediumMargin, vertical: mediumMargin),
                   child: Container(
                     decoration: BoxDecoration(
@@ -38,7 +38,7 @@ class ShowCaseView extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisSize: MainAxisSize.min,
                       children: [
-                        CustomText(
+                        const CustomText(
                           text: "URI",
                           fontSize: textRegular2X,
                           fontWeight: FontWeight.w500,

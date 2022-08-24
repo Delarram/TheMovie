@@ -12,24 +12,24 @@ class BestActorSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Padding(
+        const Padding(
           padding: EdgeInsets.symmetric(
               horizontal: mediumMargin2X, vertical: mediumMargin),
           child: TitleTextWithSeeMoreView(
               titleText: bestActorTitle, seeMoreText: bestActorSeeMore),
         ),
-        Container(
+        SizedBox(
           height: bestActorHeight,
           child: ListView.separated(
-            padding: EdgeInsets.only(left: mediumMargin),
+            padding: const EdgeInsets.only(left: mediumMargin),
             shrinkWrap: true,
             scrollDirection: Axis.horizontal,
             itemBuilder: (context, index) {
-              return BestActorView();
+              return const BestActorView();
             },
             itemCount: 10,
             separatorBuilder: (BuildContext context, int index) {
-              return SizedBox(
+              return const SizedBox(
                 width: 5,
               );
             },

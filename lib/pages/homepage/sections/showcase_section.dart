@@ -20,13 +20,14 @@ class ShowCaseSection extends StatelessWidget {
           child: TitleTextWithSeeMoreView(
               titleText: showCaseTitle, seeMoreText: showCaseSeeMore),
         ),
-        Container(
+        SizedBox(
           height: showcaseHeight,
           child: ListView(
-            padding: EdgeInsets.only(left: mediumMargin2X),
+            padding: const EdgeInsets.only(left: mediumMargin2X),
             shrinkWrap: true,
             scrollDirection: Axis.horizontal,
-            children: [
+            children: const [
+              ShowCaseView(),
               ShowCaseView(),
               ShowCaseView(),
               ShowCaseView(),

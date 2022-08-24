@@ -45,7 +45,8 @@ class HomePage extends StatelessWidget {
                   const SizedBox(
                     height: mediumMargin2X,
                   ),
-                  BestActorSection()
+                  BestActorSection(),
+                  SizedBox(height: mediumMargin2X,)
                 ],
               ),
             ),
