@@ -2,7 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:moviedp/pages/homepage/homewidgets/movie_list_title.dart';
 import 'package:moviedp/pages/homepage/homewidgets/title_text_with_see_more_view.dart';
-import 'package:moviedp/pages/viewitem/banner_section.dart';
+import 'package:moviedp/pages/viewitem/banner_view.dart';
+import 'package:moviedp/pages/viewitem/best_actor_view.dart';
 import 'package:moviedp/pages/viewitem/movie_view.dart';
 import 'package:moviedp/pages/viewitem/showcase_view.dart';
 import 'package:moviedp/resource/colors.dart';
@@ -39,29 +40,27 @@ class HomePage extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  BannerSectionView(),
-                  SizedBox(height: marginLarge),
-                  HorizontalMovieListView(),
-                  HorizontalMovieListView(),
+                 const BannerSectionView(),
+                  const SizedBox(height: marginLarge),
+                 const HorizontalMovieListView(),
+                  const HorizontalMovieListView(),
+                  ShowCaseSection(),
+                  SizedBox(height: mediumMargin2X,),
                   Padding(
                     padding: EdgeInsets.symmetric(
                         horizontal: mediumMargin2X, vertical: mediumMargin),
                     child: TitleTextWithSeeMoreView(
-                        titleText: showCaseTitle, seeMoreText: showCaseSeeMore),
+                        titleText: bestActorTitle, seeMoreText: bestActorSeeMore),
                   ),
                   Container(
-                    padding: EdgeInsets.only(left: mediumMargin2X),
-                    height: 270,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(30)
-                    ),
+                    height: bestActorHeight,
                     child: ListView(
-                      shrinkWrap: true,
-                      scrollDirection: Axis.horizontal,
+                      scrollDirection:Axis.horizontal,
+                      padding: EdgeInsets.only(left: mediumMargin2X),
                       children: [
-                        ShowCaseView(),
-                        ShowCaseView(),
-                        ShowCaseView(),
+                        BestActorView(),
+                        BestActorView(),
+                        BestActorView(),
                       ],
                     ),
                   )
@@ -73,6 +72,42 @@ class HomePage extends StatelessWidget {
   }
 }
 
+class ShowCaseSection extends StatelessWidget {
+  const ShowCaseSection({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        const Padding(
+          padding: EdgeInsets.symmetric(
+              horizontal: mediumMargin2X, vertical: mediumMargin),
+          child: TitleTextWithSeeMoreView(
+              titleText: showCaseTitle, seeMoreText: showCaseSeeMore),
+        ),
+        Container(
+          padding: EdgeInsets.only(left: mediumMargin2X),
+          height: showcaseHeight,
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(30)
+          ),
+          child: ListView(
+            shrinkWrap: true,
+            scrollDirection: Axis.horizontal,
+            children: [
+              ShowCaseView(),
+              ShowCaseView(),
+              ShowCaseView(),
+            ],
+          ),
+        )
+      ],
+    );
+  }
+}
+
 class HorizontalMovieListView extends StatelessWidget {
   const HorizontalMovieListView({Key? key}) : super(key: key);
   @override
@@ -80,8 +115,8 @@ class HorizontalMovieListView extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Padding(
-            padding: const EdgeInsets.only(left: mediumMargin2X),
+       const Padding(
+            padding: EdgeInsets.only(left: mediumMargin2X),
             child: MovieListTitle(
               text: mainScreenBestPopularAndSeries,
             )),

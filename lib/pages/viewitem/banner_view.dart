@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:moviedp/resource/colors.dart';
 import 'package:moviedp/resource/dimens.dart';
@@ -9,23 +8,21 @@ class BannerView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Stack(
-        children: const [
-          Positioned.fill(
-            child: BannerImageView(),
-          ),
-          Positioned.fill(child: BannerGradientView()),
-          Align(
-            alignment: Alignment.bottomLeft,
-            child: BannerTextView(),
-          ),
-          Align(
-            alignment: Alignment.center,
-            child: BannerIconView(),
-          ),
-        ],
-      ),
+    return Stack(
+      children: const [
+        Positioned.fill(
+          child: BannerImageView(),
+        ),
+        Positioned.fill(child: BannerGradientView()),
+        Align(
+          alignment: Alignment.bottomLeft,
+          child: BannerTextView(),
+        ),
+        Align(
+          alignment: Alignment.center,
+          child: BannerIconView(),
+        ),
+      ],
     );
   }
 }

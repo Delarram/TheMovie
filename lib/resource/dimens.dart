@@ -13,3 +13,6 @@ const textHeading1X = 24.0;
 const bannerContainerHeight = 200.0;
 const movieListHeight = 210.0;
 const movieListItemWidth = 200.0;
+const showcaseHeight = 230.0;
+const bestActorHeight = 180.0;
+const bestActorItemWidth = 180.0;

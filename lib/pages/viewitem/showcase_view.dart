@@ -9,7 +9,7 @@ class ShowCaseView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
         padding: const  EdgeInsets.only(right: mediumMargin2X),
-        width: 230,
+        width: 200,
         child: Stack(
           children: [
             Positioned.fill(
@@ -22,6 +22,7 @@ class ShowCaseView extends StatelessWidget {
               child: Icon(
                 Icons.play_circle,
                 size: 50,
+                color: Colors.yellow,
               ),
             ),
             const Align(
