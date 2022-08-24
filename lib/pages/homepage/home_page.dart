@@ -40,30 +40,15 @@ class HomePage extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                 const BannerSectionView(),
+                  const BannerSectionView(),
                   const SizedBox(height: marginLarge),
-                 const HorizontalMovieListView(),
                   const HorizontalMovieListView(),
-                  ShowCaseSection(),
-                  SizedBox(height: mediumMargin2X,),
-                  Padding(
-                    padding: EdgeInsets.symmetric(
-                        horizontal: mediumMargin2X, vertical: mediumMargin),
-                    child: TitleTextWithSeeMoreView(
-                        titleText: bestActorTitle, seeMoreText: bestActorSeeMore),
+                  const HorizontalMovieListView(),
+                  const ShowCaseSection(),
+                  const SizedBox(
+                    height: mediumMargin2X,
                   ),
-                  Container(
-                    height: bestActorHeight,
-                    child: ListView(
-                      scrollDirection:Axis.horizontal,
-                      padding: EdgeInsets.only(left: mediumMargin2X),
-                      children: [
-                        BestActorView(),
-                        BestActorView(),
-                        BestActorView(),
-                      ],
-                    ),
-                  )
+                  BestActorSection()
                 ],
               ),
             ),
@@ -71,6 +56,44 @@ class HomePage extends StatelessWidget {
     );
   }
 }
+
+class BestActorSection extends StatelessWidget {
+  const BestActorSection({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Padding(
+          padding: EdgeInsets.symmetric(
+              horizontal: mediumMargin2X, vertical: mediumMargin),
+          child: TitleTextWithSeeMoreView(
+              titleText: bestActorTitle,
+              seeMoreText: bestActorSeeMore),
+        ),
+        Container(
+          height: bestActorHeight,
+          child: ListView.separated(
+            padding: EdgeInsets.only(left: mediumMargin),
+            shrinkWrap: true,
+            scrollDirection: Axis.horizontal,
+            itemBuilder: (context, index) {
+              return BestActorView();
+            },
+            itemCount: 10,
+            separatorBuilder: (BuildContext context, int index) {
+              return SizedBox(
+                width: 5,
+              );
+            },
+          ),
+        )
+      ],
+    );
+  }
+}
+
+
 
 class ShowCaseSection extends StatelessWidget {
   const ShowCaseSection({
@@ -88,12 +111,9 @@ class ShowCaseSection extends StatelessWidget {
               titleText: showCaseTitle, seeMoreText: showCaseSeeMore),
         ),
         Container(
-          padding: EdgeInsets.only(left: mediumMargin2X),
           height: showcaseHeight,
-          decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(30)
-          ),
           child: ListView(
+            padding: EdgeInsets.only(left: mediumMargin2X),
             shrinkWrap: true,
             scrollDirection: Axis.horizontal,
             children: [
@@ -115,7 +135,7 @@ class HorizontalMovieListView extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-       const Padding(
+        const Padding(
             padding: EdgeInsets.only(left: mediumMargin2X),
             child: MovieListTitle(
               text: mainScreenBestPopularAndSeries,
