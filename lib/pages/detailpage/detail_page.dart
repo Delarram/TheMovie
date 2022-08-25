@@ -14,7 +14,7 @@ class DetailPage extends StatelessWidget {
               title: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Icon(Icons.arrow_back_ios),
+                 const  Icon(Icons.arrow_back_ios),
                   Icon(Icons.search)
                 ],
               ),

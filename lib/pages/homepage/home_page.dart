@@ -6,6 +6,9 @@ import 'package:moviedp/pages/homepage/sections/horizontal_movie_listview.dart';
 import 'package:moviedp/pages/homepage/sections/showcase_section.dart';
 import 'package:moviedp/resource/colors.dart';
 import 'package:moviedp/resource/dimens.dart';
+import 'package:moviedp/resource/string.dart';
+import 'package:moviedp/widgets/custom_text.dart';
+import 'package:moviedp/widgets/see_more_text.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -16,7 +19,7 @@ class HomePage extends StatelessWidget {
       backgroundColor: Color(0xff161A20),
       appBar: AppBar(
         centerTitle: true,
-        backgroundColor: pColor,
+        backgroundColor: primaryColor,
         title: const Text(
           "Discover",
           style: TextStyle(fontWeight: FontWeight.w700),
@@ -40,13 +43,46 @@ class HomePage extends StatelessWidget {
                   const BannerSectionView(),
                   const SizedBox(height: marginLarge),
                   const HorizontalMovieListView(),
+                  const SizedBox(height: marginLarge),
+                  Container(
+                    decoration: BoxDecoration(
+                      color: primaryColor,
+                      borderRadius: BorderRadius.circular(10)
+                    ),
+                    height: 180,
+                    margin: const EdgeInsets.symmetric(
+                      horizontal: mediumMargin2X,
+                    ),
+                    padding: EdgeInsets.all(mediumMargin2X),
+                    child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            CustomText(
+                              text: "Check Movie\nShowtimes",
+                              color: Colors.white,
+                              fontWeight: FontWeight.w700,
+                              fontSize: textHeading1X,
+                            ),
+                            Spacer(),
+                            SeeMoreText(text: mainScreenSeeMore,color: Colors.amber,)
+                          ],
+                        ),
+                        Icon(Icons.location_on_rounded,size: 50,color: Colors.white,)
+                      ],
+                    ),
+                  ),
+                  const SizedBox(height: marginLarge),
                   const HorizontalMovieListView(),
                   const ShowCaseSection(),
                   const SizedBox(
                     height: mediumMargin2X,
                   ),
                   BestActorSection(),
-                  SizedBox(height: mediumMargin2X,)
+                  SizedBox(
+                    height: mediumMargin2X,
+                  )
                 ],
               ),
             ),
