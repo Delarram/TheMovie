@@ -16,3 +16,4 @@ const movieListItemWidth = 200.0;
 const showcaseHeight = 230.0;
 const bestActorHeight = 180.0;
 const bestActorItemWidth = 180.0;
+const checkMovieHeight = 180.0;
