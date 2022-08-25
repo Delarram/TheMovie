@@ -7,9 +7,6 @@ import 'package:moviedp/pages/homepage/sections/horizontal_movie_listview.dart';
 import 'package:moviedp/pages/homepage/sections/showcase_section.dart';
 import 'package:moviedp/resource/colors.dart';
 import 'package:moviedp/resource/dimens.dart';
-import 'package:moviedp/resource/string.dart';
-import 'package:moviedp/widgets/custom_text.dart';
-import 'package:moviedp/widgets/see_more_text.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -63,4 +60,3 @@ class HomePage extends StatelessWidget {
     );
   }
 }
-

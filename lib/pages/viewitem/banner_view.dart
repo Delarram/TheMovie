@@ -22,7 +22,6 @@ class BannerView extends StatelessWidget {
           alignment: Alignment.center,
           child: BannerIconView(),
         ),
-
       ],
     );
   }
@@ -33,7 +32,10 @@ class BannerIconView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Icon(Icons.play_circle,size: 50,);
+    return const Icon(
+      Icons.play_circle,
+      size: 50,
+    );
   }
 }
 
