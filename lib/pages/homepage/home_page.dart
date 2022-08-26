@@ -1,12 +1,13 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:moviedp/pages/homepage/sections/banner_section_view.dart';
-import 'package:moviedp/pages/homepage/sections/best_actor_section.dart';
-import 'package:moviedp/pages/homepage/sections/check_movie_section.dart';
-import 'package:moviedp/pages/homepage/sections/horizontal_movie_listview.dart';
-import 'package:moviedp/pages/homepage/sections/showcase_section.dart';
 import 'package:moviedp/resource/colors.dart';
 import 'package:moviedp/resource/dimens.dart';
+
+import 'homepage_section/banner_section_view.dart';
+import 'homepage_section/best_actor_section.dart';
+import 'homepage_section/check_movie_section.dart';
+import 'homepage_section/horizontal_movie_listview.dart';
+import 'homepage_section/showcase_section.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
