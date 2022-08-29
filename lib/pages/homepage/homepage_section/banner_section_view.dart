@@ -26,7 +26,8 @@ class _BannerSectionViewState extends State<BannerSectionView> {
                 BannerView(),
                 BannerView(),
               ],
-            )),
+            )
+        ),
         DotsIndicator(
           dotsCount: 2,
           position: _position,
