@@ -14,7 +14,7 @@ class CheckMovieSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-          color: primaryColor,
+          color: homeScreenBackground,
           borderRadius: BorderRadius.circular(10)
       ),
       height: checkMovieHeight,

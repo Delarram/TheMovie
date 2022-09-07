@@ -12,11 +12,7 @@ class HorizontalMovieListView extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const Padding(
-            padding: EdgeInsets.only(left: mediumMargin2X),
-            child: MovieListTitle(
-              text: mainScreenBestPopularAndSeries,
-            )),
+
         const SizedBox(
           height: mediumMargin,
         ),

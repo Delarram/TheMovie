@@ -10,7 +10,16 @@ import 'homepage_section/horizontal_movie_listview.dart';
 import 'homepage_section/showcase_section.dart';
 
 class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
+  List<String> movieListTabBar = [
+    "Action"
+        "Romantic"
+        "Horror"
+        "comedy"
+        "Drama"
+  ];
+  HomePage({
+    Key? key,required this.movieListTabBar
+  }) : super(key: key,);
 
   @override
   Widget build(BuildContext context) {
@@ -38,19 +47,23 @@ class HomePage extends StatelessWidget {
             child: SingleChildScrollView(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: const [
+                children: [
                   BannerSectionView(),
                   SizedBox(height: marginLarge),
                   HorizontalMovieListView(),
                   SizedBox(height: marginLarge),
                   CheckMovieSection(),
                   SizedBox(height: marginLarge),
-                  HorizontalMovieListView(),
+                  MovieTabBarSection(movieListTabBar: movieListTabBar,
+                  ),
                   ShowCaseSection(),
                   SizedBox(
                     height: mediumMargin2X,
                   ),
-                  BestActorSection(),
+                  Container(
+                      height: bestActorContainerHeight,
+                      color: homeScreenBackground,
+                      child: BestActorSection()),
                   SizedBox(
                     height: mediumMargin2X,
                   )
@@ -58,6 +71,37 @@ class HomePage extends StatelessWidget {
               ),
             ),
           )),
+    );
+  }
+}
+
+class MovieTabBarSection extends StatelessWidget {
+  const MovieTabBarSection({
+    Key? key,required this.movieListTabBar,
+  }) : super(key: key);
+
+  final List<String> movieListTabBar;
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        DefaultTabController(
+            length: movieListTabBar.length,
+            child: TabBar(
+              isScrollable: true,
+              indicatorColor: playButtonColor,
+              unselectedLabelColor: Colors.white,
+              tabs: movieListTabBar.map(
+                      (movieListTabBar) => Tab(child: Text(movieListTabBar)
+                        ),
+              ).toList()
+            )
+        ),
+        Container(
+          padding: EdgeInsets.only(top: mediumMargin2X,bottom: marginLarge),
+           color: homeScreenBackground,
+            child: HorizontalMovieListView()),
+      ],
     );
   }
 }
