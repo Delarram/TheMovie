@@ -49,12 +49,29 @@ class _MovieProductState extends State<MovieProduct> {
                     Navigator.pop(context);
                   },
                   child: Icon(
-                    Icons.arrow_back,
+                    Icons.search,
                     color: Colors.black,
                   ),
                 );
               }),
-            )
+             expandedHeight: MediaQuery.of(context).size.height/2.5,
+              floating: false,
+              pinned: true,
+              flexibleSpace: FlexibleSpaceBar(
+                centerTitle: true,
+                // title: Text(
+                //   this.widget.product.name,
+                //   style: TextStyle(
+                //     color: Colors.black,
+                //     fontSize: 16.0,
+                //   ),
+                // ),
+                background: Padding(
+                  padding: EdgeInsets.only(top:90),
+                  child: Image.network("https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg",fit: BoxFit.cover,)
+                ),
+              ),
+            ),
           ];
         },
       ),
