@@ -83,6 +83,7 @@ class MovieTabBarSection extends StatelessWidget {
   final List<String> movieListTabBar;
   @override
   Widget build(BuildContext context) {
+
     return Column(
       children: [
         DefaultTabController(

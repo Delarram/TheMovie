@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:moviedp/pages/bottomnavigationbar/bottom_navigation.dart';
 import 'package:moviedp/pages/homepage/home_page.dart';
 
 void main() {
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return  MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomePage(movieListTabBar: [],),
+      home: BottomNav()
     );
   }
 }
