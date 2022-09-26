@@ -9,7 +9,7 @@ class BannerSectionView extends StatefulWidget {
 }
 
 class _BannerSectionViewState extends State<BannerSectionView> {
-    double _position = 0;
+  double _position = 0;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -18,7 +18,7 @@ class _BannerSectionViewState extends State<BannerSectionView> {
             height: MediaQuery.of(context).size.height / 4,
             child: PageView(
               onPageChanged: (page) {
-                setState((){
+                setState(() {
                   _position = page.toDouble();
                 });
               },
@@ -26,8 +26,7 @@ class _BannerSectionViewState extends State<BannerSectionView> {
                 BannerView(),
                 BannerView(),
               ],
-            )
-        ),
+            )),
         DotsIndicator(
           dotsCount: 2,
           position: _position,
