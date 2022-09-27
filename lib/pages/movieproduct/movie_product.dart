@@ -54,8 +54,9 @@ class _MovieProductState extends State<MovieProduct> {
                   ),
                 );
               }),
-             expandedHeight: MediaQuery.of(context).size.height/2.5,
+             expandedHeight: MediaQuery.of(context).size.height/2.3,
               floating: false,
+              backgroundColor: const Color(0xffFFFFFF),
               pinned: true,
               flexibleSpace: FlexibleSpaceBar(
                 centerTitle: true,
@@ -67,7 +68,7 @@ class _MovieProductState extends State<MovieProduct> {
                 //   ),
                 // ),
                 background: Padding(
-                  padding: EdgeInsets.only(top:90),
+                  padding: const EdgeInsets.only(top:90),
                   child: Image.network("https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg",fit: BoxFit.cover,)
                 ),
               ),

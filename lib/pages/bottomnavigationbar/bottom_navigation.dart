@@ -1,6 +1,9 @@
 // import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:moviedp/pages/detailpage/detail_page.dart';
+import 'package:moviedp/pages/homepage/home_page.dart';
+import 'package:moviedp/resource/colors.dart';
 
 import '../movieproduct/movie_product.dart';
 
@@ -17,13 +20,9 @@ class _BottomNavState extends State<BottomNav> {
   final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
   int _selectedIndex = 0;
   static List<Widget> _widgetOptions = <Widget>[
-    Center(
-      child: Text("Home"),
-    ),
+    HomePage(movieListTabBar: []),
     MovieProduct(),
-    Center(
-      child: Text("Home"),
-    ),
+    DetailPage()
   ];
 
   @override
@@ -42,7 +41,7 @@ class _BottomNavState extends State<BottomNav> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Color(0xff161A20),
       key: _scaffoldKey,
       // appBar: AppBar(title: Text('home')),
       body: Center(
@@ -50,36 +49,89 @@ class _BottomNavState extends State<BottomNav> {
       ),
       bottomNavigationBar:
       Container(
-        margin: EdgeInsets.symmetric(horizontal: 10,vertical: 5),
-        color: Colors.grey,
+        margin:const  EdgeInsets.symmetric(horizontal: 40,vertical: 10),
         child: ClipRRect(
           borderRadius: BorderRadius.circular(30),
           child: BottomNavigationBar(
-            items: const <BottomNavigationBarItem>[
+            items:  <BottomNavigationBarItem>[
               BottomNavigationBarItem(
-                icon: ImageIcon(AssetImage("assets/images/homeicon.jpg")),
-                activeIcon: ImageIcon(AssetImage("assets/images/homeicon.jpg")),
+                icon: Container(
+                  height: 35,width: 35,
+                  decoration: BoxDecoration(
+                      color: Colors.transparent,
+                      shape: BoxShape.circle,
+                      image: DecorationImage(
+                          image: AssetImage("assets/images/homeicon.jpg")
+                      )
+                  ),
+                ),
+                activeIcon: Container(
+                  height: 35,width: 35,
+                  decoration: BoxDecoration(
+                      color: Colors.transparent,
+                      shape: BoxShape.circle,
+                      image: DecorationImage(
+                          image: AssetImage("assets/images/homeicon.jpg")
+                      )
+                  ),
+                ),
                 label: 'Home',
               ),
               BottomNavigationBarItem(
-                icon: ImageIcon(
-                  AssetImage("assets/images/homeicon.jpg"),
+                icon: Container(
+                  height: 35,width: 35,
+                  decoration: BoxDecoration(
+                      color: Colors.transparent,
+                  shape: BoxShape.circle,
+                    image: DecorationImage(
+                      image: AssetImage("assets/images/homeicon.jpg")
+                    )
+                  ),
                 ),
-                activeIcon: ImageIcon(AssetImage("assets/images/homeicon.jpg")),
+                // ImageIcon(
+                //   AssetImage("assets/images/homeicon.jpg"),
+                // ),
+                activeIcon:Container(
+                  height: 35,width: 35,
+                  decoration: const BoxDecoration(
+                    color: Colors.transparent,
+                      shape: BoxShape.circle,
+                    image: DecorationImage(
+                        image: AssetImage("assets/images/homeicon.jpg",)
+                    ),
+                  ),
+                ),
                 label: 'search',
               ),
               BottomNavigationBarItem(
-                icon: ImageIcon(AssetImage("assets/images/homeicon.jpg")),
-                activeIcon: ImageIcon(AssetImage("assets/images/homeicon.jpg")),
+                icon:Container(
+                  height: 35,width: 35,
+                  decoration: BoxDecoration(
+                      color: Colors.transparent,
+                      shape: BoxShape.circle,
+                      image: DecorationImage(
+                          image: AssetImage("assets/images/homeicon.jpg")
+                      )
+                  ),
+                ),
+                activeIcon:Container(
+                  height: 35,width: 35,
+                  decoration: BoxDecoration(
+                      color: Colors.transparent,
+                      shape: BoxShape.circle,
+                      image: DecorationImage(
+                          image: AssetImage("assets/images/homeicon.jpg")
+                      )
+                  ),
+                ),
                 label: 'Wishlist',
               ),
             ],
-            type: BottomNavigationBarType.fixed,
+            backgroundColor: Colors.grey,
             elevation: 8,
             currentIndex: _selectedIndex,
             selectedItemColor: const Color(0xff333333),
-            unselectedItemColor: Colors.grey,
-            selectedFontSize: 15,
+            selectedFontSize: 10,
             unselectedFontSize: 10,
             iconSize: 20,
             selectedLabelStyle:
