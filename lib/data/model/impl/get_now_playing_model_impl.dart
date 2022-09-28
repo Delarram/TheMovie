@@ -16,7 +16,7 @@ class GetNowPlayingMovieModelImpl extends BaseModel with GetNowPlayingMovieModel
   GetNowPlayingMovieModelImpl._internal();
   
   @override
-  Future<List<MovieVO>> getNowPlayingMovie(int page) {
+  Future<List<MovieVO>> getNowPlayingMovieList(int page) {
     return mTheApi.getNowPlayingMovies(apiKey,languageEnUs,"$page").then((value) {
       Map<String, dynamic> jsonMap = json.decode(value);
       print("nowplaying==>${jsonMap["data"]}");
