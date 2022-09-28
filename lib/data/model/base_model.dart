@@ -8,7 +8,6 @@ abstract class BaseModel {
   BaseModel() {
     final dio = Dio(
       BaseOptions(
-
           followRedirects: false,
           baseUrl: aBaseUrlDev,
           validateStatus: (status) {

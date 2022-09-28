@@ -2,8 +2,8 @@ import 'package:json_annotation/json_annotation.dart';
 import 'package:moviedp/data/vos/movie_vo.dart';
 import 'date_vo.dart';
 
-
 part 'now_playing_vo.g.dart';
+
 
 @JsonSerializable()
 class NowPlayingVO{
