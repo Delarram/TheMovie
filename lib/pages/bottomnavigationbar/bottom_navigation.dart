@@ -117,7 +117,7 @@ class _BottomNavState extends State<BottomNav> {
                 activeIcon:Container(
                   height: 35,width: 35,
                   decoration: BoxDecoration(
-                      color: Colors.transparent,
+                      color: Colors.grey,
                       shape: BoxShape.circle,
                       image: DecorationImage(
                           image: AssetImage("assets/images/homeicon.jpg")
@@ -127,7 +127,7 @@ class _BottomNavState extends State<BottomNav> {
                 label: 'Wishlist',
               ),
             ],
-            backgroundColor: Colors.grey,
+            backgroundColor: Colors.white,
             elevation: 8,
             currentIndex: _selectedIndex,
             selectedItemColor: const Color(0xff333333),
