@@ -13,10 +13,11 @@ class NowPlayingBloc extends ChangeNotifier{
 
   NowPlayingBloc(){
     getNowPlaying();
+    notifyListeners();
   }
 
  void getNowPlaying(){
-   nowPlayingMovieModel.getNowPlayingMovieList(1).then((value) {
+   nowPlayingMovieModel.getNowPlayingMovieList(1).then((value){
        nowPlayingMovieList = value;
        print("nowplayingmovieList==>$nowPlayingMovieList");
       notifyListeners();
