@@ -12,7 +12,7 @@ class _PostMethodApiState extends State<PostMethodApi> {
     Dio dio = new Dio();
    Future postData() async{
 
-     final String pathUrl = "https://jsonplaceholder.typicode.com/posts";
+     const String pathUrl = "https://jsonplaceholder.typicode.com/posts";
 
      dynamic data = {
        'title' : "flutter http post",
@@ -20,7 +20,8 @@ class _PostMethodApiState extends State<PostMethodApi> {
        'user_id' : 1
      };
 
-     var response = await dio.post(pathUrl,data: data,options: Options(headers: {
+     var response = await dio.post(
+         pathUrl,data: data,options: Options(headers: {
        'Content-type': 'application/json; charset=UTF-8',
      }));
      
