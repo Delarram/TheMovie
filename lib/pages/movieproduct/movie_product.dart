@@ -13,7 +13,7 @@ class _MovieProductState extends State<MovieProduct> {
     return Scaffold(
       body: NestedScrollView(
         body: ListView.separated(
-          padding: EdgeInsets.all(5),
+          padding: const EdgeInsets.all(5),
             itemBuilder: (context, index) {
               return Container(
                 decoration: BoxDecoration(
@@ -24,7 +24,7 @@ class _MovieProductState extends State<MovieProduct> {
               );
             },
             separatorBuilder: (context, index) {
-              return SizedBox(
+              return const SizedBox(
                 height: 2,
               );
             },
@@ -37,7 +37,7 @@ class _MovieProductState extends State<MovieProduct> {
                   onTap: () {
                     Navigator.pop(context);
                   },
-                  child: Icon(
+                  child: const Icon(
                     Icons.arrow_back,
                     color: Colors.black,
                   ),
@@ -48,7 +48,7 @@ class _MovieProductState extends State<MovieProduct> {
                   onTap: () {
                     Navigator.pop(context);
                   },
-                  child: Icon(
+                  child: const Icon(
                     Icons.search,
                     color: Colors.black,
                   ),

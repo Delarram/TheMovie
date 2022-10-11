@@ -7,12 +7,12 @@ import '../homewidgets/movie_list_title.dart';
 
 class HorizontalMovieListView extends StatelessWidget {
   const HorizontalMovieListView({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-
         const SizedBox(
           height: mediumMargin,
         ),
