@@ -113,7 +113,7 @@ class _BottomNavState extends State<BottomNav> {
                 ),
                 activeIcon:Container(
                   height: 35,width: 35,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                       color: Colors.grey,
                       shape: BoxShape.circle,
                       image: DecorationImage(
