@@ -13,7 +13,7 @@ class _MovieProductState extends State<MovieProduct> {
     return Scaffold(
       body: NestedScrollView(
         body: ListView.separated(
-          padding: EdgeInsets.all(5),
+          padding: const EdgeInsets.all(5),
             itemBuilder: (context, index) {
               return Container(
                 decoration: BoxDecoration(
@@ -24,7 +24,7 @@ class _MovieProductState extends State<MovieProduct> {
               );
             },
             separatorBuilder: (context, index) {
-              return SizedBox(
+              return const SizedBox(
                 height: 2,
               );
             },
@@ -48,7 +48,7 @@ class _MovieProductState extends State<MovieProduct> {
                   onTap: () {
                     Navigator.pop(context);
                   },
-                  child: Icon(
+                  child: const Icon(
                     Icons.search,
                     color: Colors.black,
                   ),
@@ -60,13 +60,6 @@ class _MovieProductState extends State<MovieProduct> {
               pinned: true,
               flexibleSpace: FlexibleSpaceBar(
                 centerTitle: true,
-                // title: Text(
-                //   this.widget.product.name,
-                //   style: TextStyle(
-                //     color: Colors.black,
-                //     fontSize: 16.0,
-                //   ),
-                // ),
                 background: Padding(
                   padding: const EdgeInsets.only(top:90),
                   child: Image.network("https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg",fit: BoxFit.cover,)
