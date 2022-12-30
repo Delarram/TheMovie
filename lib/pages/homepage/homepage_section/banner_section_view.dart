@@ -22,7 +22,7 @@ class _BannerSectionViewState extends State<BannerSectionView> {
                   _position = page.toDouble();
                 });
               },
-              children: const [
+              children:  [
                 BannerView(),
                 BannerView(),
               ],
