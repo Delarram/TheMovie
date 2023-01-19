@@ -1,7 +1,9 @@
-import '../vos/movie_vo.dart';
+import 'package:moviedp/data/vos/now_playing_vo.dart';
+
+
 
 abstract class GetNowPlayingMovieModel{
 
-  Future<List<MovieVO>> getNowPlayingMovieList(int page);
+  Future<List<NowPlayingVO>> getNowPlayingMovieList(int page);
 
 }

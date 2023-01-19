@@ -13,6 +13,4 @@ const String apiKey = "a592b2e2afb171ed4c586b9852504279";
 const String languageEnUs = "en-US";
 
 //
-
-
 //https://api.themoviedb.org/3/movie/550?api_key=a592b2e2afb171ed4c586b9852504279

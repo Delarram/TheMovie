@@ -4,11 +4,12 @@ import 'package:flutter/material.dart';
 
 import '../data/model/get_now_playing_movie_model.dart';
 import '../data/model/impl/get_now_playing_model_impl.dart';
-import '../data/vos/movie_vo.dart';
+
+import '../data/vos/now_playing_vo.dart';
 
 class NowPlayingBloc extends ChangeNotifier{
   GetNowPlayingMovieModel nowPlayingMovieModel = GetNowPlayingMovieModelImpl();
-   List<MovieVO>  nowPlayingMovieList = [];
+   List<NowPlayingVO>  nowPlayingMovieList = [];
 
 
   NowPlayingBloc(){
