@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:moviedp/resource/colors.dart';
 import 'package:moviedp/resource/dimens.dart';
 
+import '../../bloc/now_playing_bloc.dart';
 import 'homepage_section/banner_section_view.dart';
 import 'homepage_section/best_actor_section.dart';
 import 'homepage_section/check_movie_section.dart';
@@ -10,21 +11,27 @@ import 'homepage_section/horizontal_movie_listview.dart';
 import 'homepage_section/showcase_section.dart';
 
 class HomePage extends StatelessWidget {
+  HomePage({
+    Key? key,required this.movieListTabBar
+  }) : super(key: key,);
+
   List<String> movieListTabBar = [
-    "Action"
+      "Action"
         "Romantic"
         "Horror"
         "comedy"
         "Drama"
   ];
-  HomePage({
-    Key? key,required this.movieListTabBar
-  }) : super(key: key,);
-
   @override
   Widget build(BuildContext context) {
+    // return ChangeNotifierProvider<NowPlayingBloc>(
+    //   create: (BuildContext context) => NowPlayingBloc(),
+    // child: Consumer<NowPlayingBloc>(builder: (context, bloc, child){
+    //   return
+    // }),
+    // );
     return Scaffold(
-      backgroundColor: Color(0xff161A20),
+      backgroundColor:const Color(0xff161A20),
       appBar: AppBar(
         centerTitle: true,
         backgroundColor: primaryColor,
@@ -48,23 +55,23 @@ class HomePage extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  BannerSectionView(),
-                  SizedBox(height: marginLarge),
-                  HorizontalMovieListView(),
-                  SizedBox(height: marginLarge),
-                  CheckMovieSection(),
-                  SizedBox(height: marginLarge),
+                  const BannerSectionView(),
+                  const  SizedBox(height: marginLarge),
+                  const HorizontalMovieListView(),
+                  const SizedBox(height: marginLarge),
+                  const CheckMovieSection(),
+                  const SizedBox(height: marginLarge),
                   MovieTabBarSection(movieListTabBar: movieListTabBar,
                   ),
-                  ShowCaseSection(),
-                  SizedBox(
+                  const ShowCaseSection(),
+                  const SizedBox(
                     height: mediumMargin2X,
                   ),
                   Container(
                       height: bestActorContainerHeight,
                       color: homeScreenBackground,
-                      child: BestActorSection()),
-                  SizedBox(
+                      child: const BestActorSection()),
+                  const SizedBox(
                     height: mediumMargin2X,
                   )
                 ],
@@ -73,7 +80,7 @@ class HomePage extends StatelessWidget {
           )),
     );
   }
-}
+  }
 
 class MovieTabBarSection extends StatelessWidget {
   const MovieTabBarSection({
