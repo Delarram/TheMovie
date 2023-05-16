@@ -77,29 +77,7 @@ class _BottomNavState extends State<BottomNav> {
                 ),
                 label: 'Home',
               ),
-              // BottomNavigationBarItem(
-              //   icon: Container(
-              //     height: 35,width: 35,
-              //     decoration: BoxDecoration(
-              //         color: Colors.transparent,
-              //     shape: BoxShape.circle,
-              //       image: DecorationImage(
-              //         image: AssetImage("assets/images/homeicon.jpg")
-              //       )
-              //     ),
-              //   ),
-              //   activeIcon:Container(
-              //     height: 35,width: 35,
-              //     decoration: const BoxDecoration(
-              //       color: Colors.transparent,
-              //         shape: BoxShape.circle,
-              //       image: DecorationImage(
-              //           image: AssetImage("assets/images/homeicon.jpg",)
-              //       ),
-              //     ),
-              //   ),
-              //   label: 'search',
-              // ),
+
               BottomNavigationBarItem(
                 icon:Container(
                   height: 35,width: 35,

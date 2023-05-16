@@ -31,7 +31,7 @@ class _BannerSectionViewState extends State<BannerSectionView> {
           dotsCount: 2,
           position: _position,
           decorator: const DotsDecorator(
-            color: Colors.red, // Inactive color
+            color: Colors.white, // Inactive color
             activeColor: Colors.amber,
           ),
         )
