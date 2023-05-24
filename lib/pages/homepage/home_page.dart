@@ -2,8 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:moviedp/resource/colors.dart';
 import 'package:moviedp/resource/dimens.dart';
-
-import '../../bloc/now_playing_bloc.dart';
 import 'homepage_section/banner_section_view.dart';
 import 'homepage_section/best_actor_section.dart';
 import 'homepage_section/check_movie_section.dart';
@@ -61,8 +59,7 @@ class HomePage extends StatelessWidget {
                   const SizedBox(height: marginLarge),
                   const CheckMovieSection(),
                   const SizedBox(height: marginLarge),
-                  MovieTabBarSection(movieListTabBar: movieListTabBar,
-                  ),
+                  MovieTabBarSection(movieListTabBar: movieListTabBar),
                   const ShowCaseSection(),
                   const SizedBox(
                     height: mediumMargin2X,

@@ -13,15 +13,15 @@ class BannerView extends StatelessWidget {
         Positioned.fill(
           child: BannerImageView(),
         ),
-        Positioned.fill(child: BannerGradientView()),
-        Align(
-          alignment: Alignment.bottomLeft,
-          child: BannerTextView(),
-        ),
-        Align(
-          alignment: Alignment.center,
-          child: BannerIconView(),
-        ),
+        // Positioned.fill(child: BannerGradientView()),
+        // Align(
+        //   alignment: Alignment.bottomLeft,
+        //   child: BannerTextView(),
+        // ),
+        // Align(
+        //   alignment: Alignment.center,
+        //   child: BannerIconView(),
+        // ),
       ],
     );
   }
@@ -87,8 +87,10 @@ class BannerImageView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Image.network(
-      "https://www.commonsensemedia.org/sites/default/files/styles/ratio_16_9_large/public/screenshots/csm-movie/x-men-ss3-0-min.jpg",
+      "https://scontent-cgk1-1.xx.fbcdn.net/v/t39.30808-6/321630558_3366220273617467_5719541007477120566_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=So1AoS9qBO4AX_pAbTS&_nc_ht=scontent-cgk1-1.xx&oh=00_AfBa8NZoUkUnxifue8b_NDQ8HAw1OENgBywNMeq-d_VWzQ&oe=63ECF5FB",
+      //"https://www.commonsensemedia.org/sites/default/files/styles/ratio_16_9_large/public/screenshots/csm-movie/x-men-ss3-0-min.jpg",
       fit: BoxFit.cover,
+      height: 300,
     );
   }
 }
